@@ -8,8 +8,6 @@ The system conducts **spoken mock interviews**: it listens to the candidate’s 
 
 ## High-Level Architecture
 
-## High-Level Architecture
-
 ```mermaid
 flowchart TB
     Mic[Browser Mic] -->|PCM Audio| WS1[WebSocket]
