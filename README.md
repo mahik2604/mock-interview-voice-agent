@@ -1,4 +1,4 @@
-# Voice Sandwich Demo 🥪
+# Voice Sandwich Agent 🥪
 
 A real-time **voice-to-voice AI interview preparation agent** built as a streaming voice pipeline using Speech-to-Text, an LLM agent, and Text-to-Speech.
 
