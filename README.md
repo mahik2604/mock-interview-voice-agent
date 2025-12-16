@@ -8,21 +8,17 @@ The system conducts **spoken mock interviews**: it listens to the candidate’s 
 
 ## High-Level Architecture
 
-Browser (Mic)
-↓ PCM audio
-WebSocket
-↓
-AssemblyAI (STT)
-↓ text events
-LLM Agent (LangChain + Gemini)
-↓ text events
-Cartesia (TTS)
-↓ audio events
-WebSocket
-↓
-Browser (Speaker)
+## High-Level Architecture
 
-
+```mermaid
+flowchart TB
+    Mic[Browser Mic] -->|PCM Audio| WS1[WebSocket]
+    WS1 --> STT[AssemblyAI STT]
+    STT -->|Text Events| LLM[LLM Agent - LangChain and Gemini]
+    LLM -->|Text Events| TTS[Cartesia TTS]
+    TTS -->|Audio Events| WS2[WebSocket]
+    WS2 --> Speaker[Browser Speaker]
+```
 The entire pipeline is **event-driven and streaming**, enabling low-latency, real-time interaction.
 
 ---
