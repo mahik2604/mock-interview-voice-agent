@@ -8,19 +8,18 @@ The system conducts **spoken mock interviews**: it listens to the candidate’s 
 
 ## High-Level Architecture
 
-
 Browser (Mic)
-   ↓ PCM audio
+↓ PCM audio
 WebSocket
-   ↓
+↓
 AssemblyAI (STT)
-   ↓ text events
+↓ text events
 LLM Agent (LangChain + Gemini)
-   ↓ text events
+↓ text events
 Cartesia (TTS)
-   ↓ audio events
+↓ audio events
 WebSocket
-   ↓
+↓
 Browser (Speaker)
 
 
